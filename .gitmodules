@@ -1,0 +1,3 @@
+[submodule "LlaMa_Factory"]
+	path = LlaMa_Factory
+	url = https://bgithub.xyz/hiyouga/LLaMA-Factory.git
