@@ -1,0 +1,44 @@
+# -----------------
+# Model Parameters
+# -----------------
+
+model_name_or_path: ../../../models/qwen/qwen2.5-0.5b
+adapter_name_or_path: ../../checkpoints/qwen2-0.5b-llava-pretrain
+visual_tower: ../../../models/clip/clip-vit-large-patch14-336
+template: qwen
+
+# -----------------
+# Method Parameters
+# -----------------
+
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+
+# --------------------
+# Dataset Parameters
+# --------------------
+
+dataset: llava_v1_5_sft
+
+# -------------------
+# Output Parameters
+# -------------------
+
+output_dir: ../../checkpoints/qwen2-0.5b-llava-sft
+logging_steps: 10
+save_steps: 500
+report_to: tensorboard
+
+# -----------------
+# Train Parameters
+# -----------------
+
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 2.0e-5
+num_train_epochs: 1.0
+lr_scheduler_type: cosine
+fp16: true
+use_unsloth: false
