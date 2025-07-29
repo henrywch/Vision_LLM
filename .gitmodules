@@ -1,3 +1,6 @@
 [submodule "LlaMa_Factory"]
 	path = LlaMa_Factory
 	url = https://bgithub.xyz/henrywch/LLaMA-Factory.git
+[submodule "LLaVA"]
+	path = LLaVA
+	url = https://bgithub.xyz/henrywch/LLaVA.git
