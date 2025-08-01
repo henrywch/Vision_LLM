@@ -10,3 +10,6 @@
 [submodule "Open_Compass"]
 	path = Open_Compass
 	url = https://bgithub.xyz/henrywch/opencompass.git
+[submodule "VLM_Eval_Kit"]
+	path = VLM_Eval_Kit
+	url = https://github.com/henrywch/VLMEvalKit.git
