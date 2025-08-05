@@ -229,7 +229,7 @@ ACCELERATE_CPU_AFFINITY=1 torchrun --nproc_per_node="${NUM_GPUS}" --nnodes="${NN
     --mm_patch_merge_type spatial_unpad \
     --bf16 True \
     --run_name ${NEXT_RUN_NAME} \
-    --output_dir checkpoints/llavanext/${NEXT_RUN_NAME} \
+    --output_dir /root/autodl-tmp/models/checkpoints/llavanext/${NEXT_RUN_NAME} \
     --num_train_epochs 1 \
     --per_device_train_batch_size 1 \
     --per_device_eval_batch_size 1 \
