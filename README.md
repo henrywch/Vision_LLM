@@ -2,7 +2,7 @@
 
 > Try to reproduce LLaVA in small scale.
 
-### Submodule Guide (All Forked, Special thanks to all the Masters)
+### Submodule Guide (All Forked, Special THANKS to all the Masters)
 
 - [henrywch/LLaMA-Factory](https://github.com/henrywch/LLaMA-Factory "Forked LlaMa_Factory")
 - [henrywch/LLaVA](https://github.com/henrywch/LLaVA "Forked LLaVA")
