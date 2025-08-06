@@ -351,7 +351,7 @@ structuralized_imagetext_understanding  0.24358974358974358
 
 ### Notations
 
-> The model config has been aligned with lmms-lab/llava-onevision-qwen2-0.5b-si (num_attention_heads, processor_config...) for compatibility in VLMEvalKit Evaluation, special thanks to **LLaVA-NeXT**
+> The model config has been aligned with lmms-lab/llava-onevision-qwen2-0.5b-si (num_attention_heads, max_window_layers, processor_config...) for compatibility in VLMEvalKit Evaluation, special thanks to **LLaVA-NeXT**
 
 > LLaVA-NeXT/model/multimodal_encoder/build.py line 16 was modified to `    if "clip" in vision_tower or (vision_tower.startswith("openai") or vision_tower.startswith("laion") or "ShareGPT4V" in vision_tower):` for local *vision_tower* load. Additionally, 
 > ```python
