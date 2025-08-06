@@ -8,6 +8,10 @@
 - Models
   - LLM: Qwen2.5-0.5B-Instruct
   - ViT: SigLIP-SO400M-Patch14-384
+- Datasets
+  - blip_laion_cc_sbu_558k
+  - coco30k_stage1.5_finetune_w_prompt (sampled from `coco118k_stage1.5_finetune_w_prompt`)
+  - llava_v1_5_mix60k (pulled source: `llava_v1_5_mix665k`)
 - Tools
   - DeepSpeed: For GPU Memory Optimization
   - OpenCompass/VLMEvalKit: For VLM Evaluation
@@ -308,4 +312,87 @@ exit 0;
 
 ```
 
-### Results
+### Results (MMBench_DEV_EN)
+
+```bash
+
+--------------------------------------  --------------------
+split                                   dev
+Overall                                 0.5420962199312714
+AR                                      0.6331658291457286
+CP                                      0.6554054054054054
+FP-C                                    0.44755244755244755
+FP-S                                    0.5426621160409556
+LR                                      0.2966101694915254
+RR                                      0.4608695652173913
+action_recognition                      0.8703703703703703
+attribute_comparison                    0.22727272727272727
+attribute_recognition                   0.6486486486486487
+celebrity_recognition                   0.6767676767676768
+function_reasoning                      0.7088607594936709
+future_prediction                       0.4
+identity_reasoning                      0.8888888888888888
+image_emotion                           0.72
+image_quality                           0.018867924528301886
+image_scene                             0.9326923076923077
+image_style                             0.6226415094339622
+image_topic                             0.75
+nature_relation                         0.3958333333333333
+object_localization                     0.2222222222222222
+ocr                                     0.6666666666666666
+physical_property_reasoning             0.4
+physical_relation                       0.20833333333333334
+social_relation                         0.6744186046511628
+spatial_relationship                    0.15555555555555556
+structuralized_imagetext_understanding  0.24358974358974358
+--------------------------------------  --------------------
+
+```
+
+### Notations
+
+> The model config has been aligned with lmms-lab/llava-onevision-qwen2-0.5b-si (num_attention_heads, processor_config...) for compatibility in VLMEvalKit Evaluation, special thanks to **LLaVA-NeXT**
+
+> LLaVA-NeXT/model/multimodal_encoder/build.py line 16 was modified to `    if "clip" in vision_tower or (vision_tower.startswith("openai") or vision_tower.startswith("laion") or "ShareGPT4V" in vision_tower):` for local *vision_tower* load. Additionally, 
+> ```python
+> 
+> 565 if "/root/autodl-tmp/models/llavanext-scaled-0.5b" in model_path:
+> 566     model_name = "llava-onevision-qwen2-0.5b-si"
+> 567 else: 
+> 568     model_name = get_model_name_from_path(model_path)
+> 
+> ```
+> VLMEvalKit/vlmeval/vlm/llava/llava.py was adapted as above to include my reproduction into the supported.
+
+> As datasets (Stage 1.5 & 2) are reduced, the result may not as satisfying as the official model, which achieves: 
+> ```bash
+>  
+> Overall                                 0.5506872852233677
+> AR                                      0.5979899497487438
+> CP                                      0.6959459459459459
+> FP-C                                    0.3776223776223776
+> FP-S                                    0.590443686006826
+> LR                                      0.23728813559322035
+> RR                                      0.5304347826086957
+> action_recognition                      0.8703703703703703
+> attribute_comparison                    0.0
+> attribute_recognition                   0.7432432432432432
+> celebrity_recognition                   0.7171717171717171
+> function_reasoning                      0.7468354430379747
+> future_prediction                       0.375
+> identity_reasoning                      0.9333333333333333
+> image_emotion                           0.82
+> image_quality                           0.05660377358490566
+> image_scene                             0.9326923076923077
+> image_style                             0.7358490566037735
+> image_topic                             0.7222222222222222
+> nature_relation                         0.3541666666666667
+> object_localization                     0.24691358024691357
+> ocr                                     0.6923076923076923
+> physical_property_reasoning             0.24
+> physical_relation                       0.4166666666666667
+> social_relation                         0.7906976744186046
+> spatial_relationship                    0.15555555555555556
+> structuralized_imagetext_understanding  0.16666666666666666
+> 
+> ```
