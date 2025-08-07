@@ -14,5 +14,5 @@
 
 ### Model & Datasets
 
-- [llava-scaled-0.5b](https://huggingface.co/henrywch2huggingface/llavanext-scaled-0.5b "llava-scaled-0.5b")
-- [LLaVA_Train](https://huggingface.co/datasets/henrywch2huggingface/LLaVA_Train "LLaVA_Train")
+- **Model**: [llava-scaled-0.5b](https://huggingface.co/henrywch2huggingface/llavanext-scaled-0.5b "llava-scaled-0.5b")
+- **Datasets**: [LLaVA_Train](https://huggingface.co/datasets/henrywch2huggingface/LLaVA_Train "LLaVA_Train")
