@@ -88,6 +88,22 @@ ACCELERATE_CPU_AFFINITY=1 torchrun --nproc_per_node="${NUM_GPUS}" --nnodes="${NN
 
 ```
 
+- Loss
+
+```json
+
+{
+  "epoch": 1.0,
+  "step": 8720,
+  "total_flos": 91701433851904.0,
+  "train_loss": 2.9441032562780816,
+  "train_runtime": 22781.75,
+  "train_samples_per_second": 24.499,
+  "train_steps_per_second": 0.383
+}
+
+```
+
 #### Stage 1.5 (Mid_Stage_Finetune): High-Quality Knowledge Learning
 
 > LLaVA-NeXT/scripts/train/direct_finetune_siglip_a4.sh
@@ -168,6 +184,22 @@ ACCELERATE_CPU_AFFINITY=1 torchrun --nproc_per_node="${NUM_GPUS}" --nnodes="${NN
     # --torch_compile_backend "eager"
 
 # You can delete the sdpa attn_implementation if you want to use flash attn
+
+```
+
+- Loss
+
+```json
+
+{
+  "epoch": 1.0,
+  "step": 937,
+  "total_flos": 46654632226816.0,
+  "train_loss": 0.8997930888178,
+  "train_runtime": 17224.4313,
+  "train_samples_per_second": 1.742,
+  "train_steps_per_second": 0.054
+}
 
 ```
 
@@ -260,6 +292,22 @@ ACCELERATE_CPU_AFFINITY=1 torchrun --nproc_per_node="${NUM_GPUS}" --nnodes="${NN
     # --frames_upbound 32 \
     # --torch_compile_backend "inductor" 
 exit 0;
+
+```
+
+- Loss
+
+```json
+
+{
+  "epoch": 1.0,
+  "step": 937,
+  "total_flos": 111946760044544.0,
+  "train_loss": 0.7040835454853266,
+  "train_runtime": 20346.5666,
+  "train_samples_per_second": 2.949,
+  "train_steps_per_second": 0.046
+}
 
 ```
 
@@ -396,3 +444,18 @@ structuralized_imagetext_understanding  0.24358974358974358
 > structuralized_imagetext_understanding  0.16666666666666666
 > 
 > ```
+> Its loss is:
+> ```json
+> 
+> {
+>   "epoch": 1.0,
+>   "step": 12464,
+>   "total_flos": 7038884969086976.0,
+>   "train_loss": 0.8383206710774112,
+>   "train_runtime": 88593.6851,
+>   "train_samples_per_second": 36.017,
+>   "train_steps_per_second": 0.141
+> }
+> 
+> ```
+>
