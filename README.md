@@ -10,7 +10,7 @@
 - [henrywch/opencompass](https://github.com/henrywch/opencompass "Forked Open_Compass")
 - [henrywch/VLMEvalKit](https://github.com/henrywch/VLMEvalKit "Forked VLMEvalKit --- For Evaluation in `vlmeval/`")
 
-### Configs, Scripts & Results please see [report.md](https://github.com/henrywch/Vision_LLM/blob/main/report.md "report") & [results](result "Loss Line Graphs and Eval Bar Charts")
+### Configs, Scripts & Results please see [report.md](https://github.com/henrywch/Vision_LLM/blob/main/report.md "report") & [results](results "Loss Line Graphs and Eval Bar Charts")
 
 ### Model & Datasets
 
