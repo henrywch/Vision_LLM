@@ -1,3 +1,6 @@
+> Github: https://github.com/henrywch/Vision_LLM  
+> Huggingface: https://huggingface.co/henrywch2huggingface/llavanext-scaled-0.5b
+
 ## LLaVA-NeXT Reproduction Scaled
 
 ### Configs
