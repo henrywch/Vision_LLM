@@ -417,7 +417,8 @@ structuralized_imagetext_understanding  0.24358974358974358
 
 > As datasets (Stage 1.5 & 2) are reduced, the result may not as satisfying as the official model, which achieves: 
 > ```bash
->  
+> 
+> --------------------------------------  --------------------
 > Overall                                 0.5506872852233677
 > AR                                      0.5979899497487438
 > CP                                      0.6959459459459459
@@ -445,6 +446,7 @@ structuralized_imagetext_understanding  0.24358974358974358
 > social_relation                         0.7906976744186046
 > spatial_relationship                    0.15555555555555556
 > structuralized_imagetext_understanding  0.16666666666666666
+> --------------------------------------  --------------------
 > 
 > ```
 > Its loss is:
