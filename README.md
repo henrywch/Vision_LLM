@@ -9,3 +9,5 @@
 - [henrywch/LLaVA-NeXT](https://github.com/henrywch/LLaVA-NeXT "Forked LLaVA_NeXT --- Main PT(S1) & SFT(S1_5, S2) Scripts in `scripts/train/`")
 - [henrywch/opencompass](https://github.com/henrywch/opencompass "Forked Open_Compass")
 - [henrywch/VLMEvalKit](https://github.com/henrywch/VLMEvalKit "Forked VLMEvalKit --- For Evaluation in `vlmeval/`")
+
+### Configs, Scripts & Results please see [report.md](https://github.com/henrywch/Vision_LLM/blob/main/report.md "report")
